@@ -1,0 +1,24 @@
+<h1>Listing fnbl_tel_nos</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Type</th>
+    <th>Number</th>
+  </tr>
+
+<% @fnbl_tel_nos.each do |fnbl_tel_no| %>
+  <tr>
+    <td><%= fnbl_tel_no.userid %></td>
+    <td><%= fnbl_tel_no.first_name %></td>
+    <td><%= fnbl_tel_no.last_name %></td>
+    <td><%= fnbl_tel_no.type1 %></td>
+    <td><%= fnbl_tel_no.value %></td>
+    <td><%= link_to 'Show', fnbl_tel_no %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

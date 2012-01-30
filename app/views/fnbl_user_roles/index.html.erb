@@ -1,0 +1,22 @@
+<h1>Listing fnbl_user_roles</h1>
+
+<table>
+  <tr>
+    <th>User Name</th>
+    <th>Role</th>
+  </tr>
+
+<% @fnbl_user_roles.each do |fnbl_user_role| %>
+  <tr>
+    <td><%= fnbl_user_role.username %></td>
+    <td><%= fnbl_user_role.role %></td>
+    <td><%= link_to 'Show', fnbl_user_role %></td>
+    <td><%= link_to 'Edit', edit_fnbl_user_role_path(fnbl_user_role) %></td>
+    <td><%= link_to 'Destroy', fnbl_user_role, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fnbl user role', new_fnbl_user_role_path %>

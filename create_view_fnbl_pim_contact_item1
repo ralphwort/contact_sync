@@ -1,0 +1,1 @@
+CREATE VIEW `funambol`.`fnbl_contact_item1` (contact, type1, value) AS SELECT contact, type, value FROM fnbl_pim_contact_item;

@@ -1,0 +1,20 @@
+<h1>Listing fnbl_pim_contact_items</h1>
+
+<table>
+  <tr>
+    <th>Telephone Number</th>
+  </tr>
+
+<% @fnbl_pim_contact_items.each do |fnbl_pim_contact_item| %>
+  <tr>
+    <td><%= fnbl_pim_contact_item.value %></td>
+    <td><%= link_to 'Show', fnbl_pim_contact_item %></td>
+    <td><%= link_to 'Edit', edit_fnbl_pim_contact_item_path(fnbl_pim_contact_item) %></td>
+    <td><%= link_to 'Destroy', fnbl_pim_contact_item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fnbl pim contact item', new_fnbl_pim_contact_item_path %>

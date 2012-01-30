@@ -1,0 +1,37 @@
+<%= form_for(@fnbl_tel_no) do |f| %>
+  <% if @fnbl_tel_no.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fnbl_tel_no.errors.count, "error") %> prohibited this fnbl_tel_no from being saved:</h2>
+
+      <ul>
+      <% @fnbl_tel_no.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :userid %><br />
+    <%= f.text_field :userid %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :type1 %><br />
+    <%= f.text_field :type1 %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,1 @@
+php #{Rails.root}/public/encrypt_password.php access21`

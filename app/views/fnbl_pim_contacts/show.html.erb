@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Contacts For:</b>
+  <%= @fnbl_pim_contact.userid %>
+</p>
+<p>
+  <b>Name</b>
+  <%= @fnbl_pim_contact.first_name + ' ' + @fnbl_pim_contact.last_name %>
+</p>
+
+<%= link_to 'Edit', edit_fnbl_pim_contact_path(@fnbl_pim_contact) %> |
+<%= link_to 'Back', fnbl_pim_contacts_path %>

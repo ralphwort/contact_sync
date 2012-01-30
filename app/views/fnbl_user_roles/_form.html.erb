@@ -1,0 +1,25 @@
+<%= form_for(@fnbl_user_role) do |f| %>
+  <% if @fnbl_user_role.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fnbl_user_role.errors.count, "error") %> prohibited this fnbl_user_role from being saved:</h2>
+
+      <ul>
+      <% @fnbl_user_role.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.select :role, ['sync_administrator', 'sync_user'] %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,1 @@
+CREATE VIEW `funambol`.`fnbl_tel_nos` (userid, first_name, last_name, type1, value) AS SELECT fnbl_pim_contact.userid, fnbl_pim_contact.first_name, fnbl_pim_contact.last_name, fnbl_pim_contact_item.type, fnbl_pim_contact_item.value FROM funambol.fnbl_pim_contact, funambol.fnbl_pim_contact_item where fnbl_pim_contact.userid = fnbl_pim_contact_item.contact

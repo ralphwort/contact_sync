@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User Name:</b>
+  <%= @fnbl_user_role.username %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @fnbl_user_role.role %>
+</p>
+
+<%= link_to 'Edit', edit_fnbl_user_role_path(@fnbl_user_role) %> |
+<%= link_to 'Back', fnbl_user_roles_path %>

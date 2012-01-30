@@ -1,0 +1,27 @@
+<h1>Listing fnbl_users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </tr>
+
+<% @fnbl_users.each do |fnbl_user| %>
+  <tr>
+    <td><%= fnbl_user.username %></td>
+    <td><%= fnbl_user.email %></td>
+    <td><%= fnbl_user.first_name %></td>
+    <td><%= fnbl_user.last_name %></td>
+    <td><%= link_to 'Show', fnbl_user %></td>
+    <td><%= link_to 'Edit', edit_fnbl_user_path(fnbl_user) %></td>
+    <td><%= link_to 'Show Contacts', fnbl_pim_contacts_url(:username => fnbl_user.username) %></td>
+    <td><%= link_to 'Destroy', fnbl_user, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fnbl user', new_fnbl_user_path %>
